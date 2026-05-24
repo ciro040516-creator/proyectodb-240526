@@ -1,0 +1,299 @@
+/*
+selector {
+propiedad: valor;
+} */
+
+/* Font Google para colocar estilos de letras*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*debo modificar los demas videos cuando esten listos*/
+video {
+    height: 400px;
+}
+
+/*selector de clase*/
+.tipografia1 {
+    font-size: 40px;
+    color: rgb(76, 74, 74);
+    text-decoration: underline;
+    text-align: center;
+    background-color: rgb(232, 151, 174);
+    font-family: "Montserrat", sans-serif;
+    margin: auto;
+    padding: 10px;
+}
+
+
+.tipografia2 {
+    font-size: 30px;
+    text-align: center;
+    color: rgb(76, 74, 74);
+    background-color: rgb(232, 151, 174);
+    font-family: "Montserrat", sans-serif;
+    margin: 20px;
+}
+
+.montserrat{
+    font-family: "Montserrat", sans-serif;
+}
+
+.tipografia3{
+    font-size: 20px;
+    text-align: justify;
+    color: black;
+    font-family: "Lato", sans-serif;
+    margin: 10px;
+    padding: 10px;
+}
+
+.lato {
+    font-family: "Lato", sans-serif;
+}
+
+.subrayado {
+    text-decoration: underline rgb(232, 151, 174) solid;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    height: 300px;        /* El alto debe ser igual al ancho */
+    border-radius: 70%;   /* Esto crea el efecto de círculo */
+    object-fit: cover;    /* Evita que la imagen se deforme si no es cuadrada */
+}
+
+
+/*reubicacion debido a cambios con Bootstrap*/
+.galeria {
+    display: flex;
+    flex-direction: row;         /* Permite alinear horizontal */
+    flex-grow: 1; /* Hace que las fotos se ajusten al mismo tamaño */
+    gap: 5px;                /* Espacio entre imágenes */
+    margin: 10px;
+    padding: auto;
+}
+
+
+.fa-whatsapp {
+    color: rgb(76, 74, 74);
+    gap: 25px;
+}
+
+.fa-facebook-f {
+    color: rgb(76, 74, 74);
+    gap: 25px;
+}
+
+.fa-at {
+    color: rgb(76, 74, 74);
+    gap: 25px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px;
+    margin: auto;
+    font-size: 50px;
+    width: 50%;
+}
+
+
+span{
+    font-size: 30px;
+    text-align: justify;
+    color: rgb(76, 74, 74);
+    font-family: "Lato", sans-serif;
+    margin: 20px;
+}
+
+nav {
+    font-size: 24px;
+    padding: 10px;
+    gap: 15px;
+    width: 100%;
+}
+
+header nav.mobile{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 80vw;
+        margin: 25px auto;
+}
+
+
+ul {
+    list-style: none; /* sin viñetas en la lista*/
+    display: flex;
+    justify-content: space-evenly;
+}
+
+ul :hover{
+    background-color: rgb(237, 202, 213);
+}
+
+
+li>a {
+    color: black;
+    text-decoration: none;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column; /* Pone un campo debajo del otro */
+    gap: 5px;              /* Separa las celdas equitativamente */
+    align-items: center; /* Alinea todo al centro */
+    align-content: center; /*centro vertical*/
+    justify-content: center; /*centro horizontal*/
+    border: solid rgb(78, 78, 78);
+    background-color: rgb(244, 219, 219);
+    padding: 10px;
+}
+
+
+input, textarea {
+    font-size: 20px;
+    font-family: "Lato", sans-serif;
+}
+
+/*uso de :hover para indicar que se posisionan en esa seccion*/
+form :focus{
+    border-color: rgb(164, 241, 216);
+    box-shadow: 5px 2px rgb(164, 241, 216); /*usado para dar el efecto 3D*/
+}
+
+
+button{
+    font-size: 25px;
+    background-color: rgb(239, 167, 167);
+    margin: 20px;
+    align-items: flex-end;
+    border-radius: 5px;
+}
+
+/*uso de :ctive para indicar que se activara en ese boton*/
+.boton :active{
+    background-color: rgb(195, 191, 225);
+}
+
+
+footer {
+    text-align:center;
+    font-size: 15px;
+    color: rgb(236, 99, 99);
+    margin: 70px;
+    font-family: "Lato", sans-serif;
+}
+
+/*redaccion para el mapa*/
+.mapa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.bootstrap img{
+    height: 500px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+
+
+/*GRID AREA*/
+.grid-Area{
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "planta planta mesa mesa"
+    "planta planta  mesa mesa"
+    "gato gato flor edificio"
+    "gato gato flor edificio";
+    margin: 0 auto;
+    width: 70vw;
+    height: 70vh;
+    position: relative;
+    background-color: rgb(229, 144, 189);
+    gap: 5px ;
+    padding: 20px;
+}
+
+.grid-Area img{
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+}
+
+.grid-Area .planta{
+    grid-area: planta;
+    border-radius: 20%;
+}
+
+.grid-Area .mesa{
+    grid-area: mesa;
+    object-fit: fill;
+    object-position: center;
+    border: 10px solid rgb(164, 241, 216);
+}
+
+.grid-Area .gato{
+    grid-area: gato;
+}
+
+.grid-Area .flor{
+    grid-area: flor;
+}
+
+.grid-Area .edificio{
+    grid-area: edificio;
+}
+
+.gridArea1{
+    display: grid;
+    grid-template-columns: 50% 100%;
+    grid-template-rows: 100%;
+    grid-template-areas: "caja1" "caja2";
+    margin: 0 auto;
+    gap: 5px ;
+    padding: 5px;
+}
+
+.gridArea1 .caja1{
+    grid-area: caja1;
+    background-color: rgb(237, 202, 213) ;
+}
+
+.gridArea1 .caja2{
+    grid-area: caja2;
+}
+
+/*RESPONSIVE ( se adapta a dispositivos moviles con enfoque desktop*/
+@media screen and (max-width: 1200px) {
+    header nav.desktop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header nav.mobile{
+        display: grid;
+        grid-template-columns: 70%;
+        width: 80vw;
+        margin: 25px auto;
+    }
+}
