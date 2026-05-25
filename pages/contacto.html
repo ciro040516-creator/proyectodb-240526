@@ -4,23 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diseños</title>
+    <title>Contacto</title>
+
     <!--link de <Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <!--Vinculo con CSS-->
     <link rel="stylesheet" href="./css/stylemejoras.css">
+
+    <!--hace referencia a iconos-->
+    <script src="https://kit.fontawesome.com/9e89734234.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-
     <!--link de JS para trabajar-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    <header>
 
+    <header>
         <img class="logo" src="./assest/logopdb.png" alt="logopdb">
 
         <!--sesccion de pegado de Navbar-->
@@ -36,13 +40,13 @@
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page"
-                                    href="./mi_primera_pagina.html">Inicio</a>
+                                    href="/index.html">Inicio</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./inicio.html">Conocenos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Diseños</a>
+                                <a class="nav-link" href="./diseño.html">Diseños</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./contacto.html">Contacto</a>
@@ -57,38 +61,40 @@
 
     <main>
         <section>
-            <h2 class="tipografia2 montserrat">Diseños</h2>
-            <div class="text-container tipografia3 lato">
-                <p>En esta sección podras encontrar diferentes proyectos.</p>
-                <p>Realizamos la página según tus preferencias. Tendras la posibilidad de elegir formato, imagenes,
-                    colores, etc..</p>
-                <p>Gracias por elegirnos!</p>
-            </div>
-        </section>
+            <h2 class="tipografia2 montserrat">Contacto</h2>
+            <div class="item">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>+5493813240896</span>
 
-        <!--seccion de diseños-->
-        <section>
-            <h2 class="tipografia2 montserrat">Proyectos</h2>
-            <div class="gridArea1">
-                <div>
-                    <h3 class="tipografia3 caja1">*Modelo de formulario para RRHH</h3>
-                </div>
-                <div>
-                    <video class="caja2" src="./video/form-muestra.mp4" autoplay loop muted>Form. Modelo para
-                        RRHH</video>
-                    <source src="movie.mp4" type="video/mp4">
-                    <source src="movie.ogg" type="video/ogg">
-                </div>
             </div>
+
+            <div class="item">
+                <i class="fa-brands fa-facebook-f"></i>
+                <span>Proyectos Di&Bere</span>
+            </div>
+
+            <div class="item">
+                <i class="fa-solid fa-at"></i>
+                <span>mazzucco.anita@yahoo.com</span>
+            </div>
+
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3004.168293624297!2d-71.26815492416118!3d-41.152678932140084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDA5JzA5LjciUyA3McKwMTUnNTYuMSJX!5e0!3m2!1ses!2sar!4v1778870318734!5m2!1ses!2sar"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
         </section>
     </main>
+
 
     <footer class="lato">
         <div>
             <p>© 2026. Ana Mazzucco. Todos los derechos reservados.</p>
         </div>
     </footer>
-
 
 </body>
 
