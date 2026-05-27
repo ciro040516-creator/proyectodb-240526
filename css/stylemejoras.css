@@ -84,21 +84,6 @@ video {
 }
 
 
-.fa-whatsapp {
-    color: rgb(76, 74, 74);
-    gap: 25px;
-}
-
-.fa-facebook-f {
-    color: rgb(76, 74, 74);
-    gap: 25px;
-}
-
-.fa-at {
-    color: rgb(76, 74, 74);
-    gap: 25px;
-}
-
 .item {
     display: flex;
     justify-content: space-evenly;
@@ -203,10 +188,12 @@ footer {
     align-items: center;
     height: 100%;
     width: 100%;
+    border: 2px solid rgb(76, 74, 74);
+    background-color: rgb(229, 144, 189);
 }
 
 .bootstrap img{
-    height: 500px;
+    height: 700px;
     margin: 20px auto;
     padding: 20px;
 }
@@ -283,17 +270,78 @@ footer {
 }
 
 /*RESPONSIVE ( se adapta a dispositivos moviles con enfoque desktop*/
-@media screen and (max-width: 1200px) {
-    header nav.desktop {
-        display: none;
-    }
+@media(max-width: 768px) {
+
+    ul {
+    list-style: none; /* sin viñetas en la lista*/
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(195, 191, 225);
 }
 
-@media screen and (min-width: 768px) {
-    header nav.mobile{
-        display: grid;
-        grid-template-columns: 70%;
-        width: 80vw;
-        margin: 25px auto;
-    }
+    .tipografia1 {
+    font-size: 30px;
+    color: rgb(76, 74, 74);
+    text-decoration: underline;
+    text-align: center;
+    background-color: rgb(232, 151, 174);
+    margin: auto;
+    padding: 10px;
+}
+
+.tipografia2 {
+    font-size: 25px;
+    text-align: center;
+    color: rgb(76, 74, 74);
+    background-color: rgb(232, 151, 174);
+    margin: 20px;
+}
+
+.tipografia3{
+    font-size: 20px;
+    text-align: justify;
+    color: black;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+.gridArea1{
+    display: block;
+    margin: 0 auto;
+    gap: 5px ;
+    padding: 5px;
+}
+
+.mapa{
+    display: flex;
+    align-content: center;
+    margin: 10px;
+    border: 2px solid rgb(76, 74, 74);
+    background-color: rgb(229, 144, 189);
+}
+
+.item {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+    margin: auto;
+    font-size: 30px;
+    width: 50%;
+}
+
+footer {
+    text-align:center;
+    font-size: 15px;
+    color: rgb(236, 99, 99);
+    margin: 70px;
+    background-color: rgb(239, 167, 167);
+}
+
+.bootstrap img{
+    height: 400px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
 }
