@@ -181,6 +181,12 @@ footer {
     font-family: "Lato", sans-serif;
 }
 
+.icon{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 25px;
+}
+
 /*redaccion para el mapa*/
 .mapa{
     display: flex;
