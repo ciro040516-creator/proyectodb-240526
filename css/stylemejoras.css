@@ -283,7 +283,7 @@ footer {
 }
 
 /*RESPONSIVE ( se adapta a dispositivos moviles con enfoque desktop*/
-@media(max-width: 768px) {
+@media screen and (max-width: 768px) {
 
     ul {
     list-style: none; /* sin viñetas en la lista*/
@@ -299,7 +299,7 @@ video {
 
 footer {
     text-align:center;
-    font-size: 15px;
+    font-size: 10px;
     color: rgb(236, 99, 99);
     margin: 70px;
     background-color: rgb(239, 167, 167);
