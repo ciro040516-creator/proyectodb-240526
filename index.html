@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primera pagina con mejoras</title>
+    <title>Diseños de paginas web</title>
 
     <!--link de <Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <!--Vinculo con CSS-->
-    <link rel="stylesheet" href="./css/stylemejoras.css">
+    <link rel="stylesheet" href="./css/style.css">
 
     <!--hace referencia a iconos-->
     <script src="https://kit.fontawesome.com/9e89734234.js" crossorigin="anonymous"></script>
@@ -22,47 +22,33 @@
 
     <header>
 
-        <img class="logo" src="./assest/logopdb.png" alt="logopdb">
-
-        <div>
-            <h1 class="tipografia1 montserrat" id="h1">Proyectos Di&Bere</h1>
+        <div class="tipografia1 montserrat position">
+            <h1>Proyectos Di&Bere</h1>
         </div>
-        <nav>
-            <ul>
-                <li><a class="subrayado" href="#index">Inicio</a></li>
-                <li><a href="./pages/inicio.html">Conocenos</a></li>
-                <li><a href="./pages/diseño.html">Diseños</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+
+        <div class="flex logo">
+            <img class="movi-logo" src="./assest/logopdb.png" alt="logopdb">
+
+            <nav>
+                <ul>
+                    <li><a class="subrayado" href="#index">Inicio</a></li>
+                    <li><a href="./pages/inicio.html">Conocenos</a></li>
+                    <li><a href="./pages/propuestas.html">Propuestas</a></li>
+                    <li><a href="./pages/ejemplos.html">Ejemplos</a></li>
+                    <li><a href="./pages/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         <section>
+
             <h2 class="tipografia2 montserrat">¡Bienvenidos!</h2>
-            <div class="text-container tipografia3 lato">
-                <p>El inicio de este emprendimiento se dio por diferente motivos, pero uno de ellos fue el poder generar
+            <div class="tipografia3 lato">
+                <p>El inicio de este proyecto se dio por diferente motivos, pero uno de ellos fue el poder generar
                     nuevas oportunidades.</p>
-                <p>El primer paso no es fácil, el proceso es un largo camino pero con una vista asombrosa. </p>
-                <p>Sueña a lo grande: LO IMPOSIBLE ES POSIBLE!</p>
-                <p>Gracias.</p>
-            </div>
-        </section>
-
-        <!--seccion de diseños-->
-        <section>
-            <h2 class="tipografia2 montserrat">Proyectos</h2>
-
-            <div class="gridArea1">
-                <div>
-                    <h3 class="tipografia3 caja1">*Modelo de formulario para RRHH</h3>
-                </div>
-                <div>
-                    <video class="caja2" src="./video/form-muestra.mp4" autoplay loop muted>Form. Modelo para
-                        RRHH</video>
-                    <source src="movie.mp4" type="video/mp4">
-                    <source src="movie.ogg" type="video/ogg">
-                </div>
+                <p>El primer paso no es fácil, el proceso es un largo camino pero con una vista asombrosa. Sueña a lo grande: LO IMPOSIBLE ES POSIBLE!</p>
             </div>
         </section>
 
@@ -101,23 +87,20 @@
                 <div class="boton">
                     <button type="submit">Enviar</button>
                 </div>
-
-
             </form>
-
         </section>
 
     </main>
 
     <footer class="lato icon">
         <div>
-        <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-whatsapp"></i>
         </div>
         <div>
-        <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-facebook-f"></i>
         </div>
         <div>
-        <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-github"></i>
         </div>
         <p>© 2026. Ana Mazzucco. Todos los derechos reservados.</p>
     </footer>

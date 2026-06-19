@@ -1,0 +1,521 @@
+/*
+selector {
+propiedad: valor;
+} */
+
+/* Font Google para colocar estilos de letras*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%); ;
+}
+
+
+nav {
+    font-size: 2rem;
+    padding: auto;
+    gap: 1rem;
+    width: 100%;
+}
+
+ul {
+    list-style: none; /* sin viñetas en la lista*/
+    display: flex;
+    justify-content: space-around;
+}
+
+ul :hover{
+    background-color: rgb(237, 202, 213);
+}
+
+li>a {
+    color: black;
+    text-decoration: none;
+}
+
+
+header nav.mobile{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 80vw;
+        margin: 25px auto;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column; /* Pone un campo debajo del otro */
+    gap: 0.5rem;              /* Separa las celdas equitativamente */
+    align-items: center; /* Alinea todo al centro */
+    justify-content: center; /*centro horizontal*/
+    border: solid rgb(78, 78, 78);
+    background-color: rgb(244, 219, 219);
+}
+
+
+input, textarea {
+    font-size: 1.5rem;
+    font-family: "Lato", sans-serif;
+}
+
+/*uso de :hover para indicar que se posisionan en esa seccion*/
+form :focus{
+    border-color: rgb(164, 241, 216);
+    box-shadow: 5px 2px rgb(164, 241, 216); /*usado para dar el efecto 3D*/
+}
+
+
+button{
+    font-size: 1.5rem;
+    background-color: rgb(239, 167, 167);
+    margin: 1.5rem;
+    align-items: flex-end;
+    border-radius: 5px;
+}
+
+
+footer {
+    text-align:center;
+    font-size: 1rem;
+    font-family: "Lato", sans-serif;
+    background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
+}
+
+
+/*selector de clase*/
+.tipografia1 {
+    font-size: 4rem;
+    color: rgb(42, 39, 39);
+    text-decoration: underline;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    margin: auto;
+    padding: 2rem;
+    background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
+}
+
+.position {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img{
+    margin: 1rem;
+    padding: auto;
+    height: 15rem;        /* El alto debe ser igual al ancho */
+    border-radius: 70%;   /* Esto crea el efecto de círculo */
+}
+
+.movi-logo{
+    animation: swirl-in-fwd 0.8s ease-out both;
+    }
+
+@keyframes swirl-in-fwd {
+    0% {
+    transform: rotate(-540deg) scale(0);
+    opacity: 0;
+    }
+    100% {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+    }
+}
+
+/*flex entre el logo y el ul*/
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar-nav :hover{
+    background-color: rgb(237, 202, 213);
+}
+
+
+.tipografia2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: rgb(53, 52, 52);
+    background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.tipografia3{
+    font-size: 1.5rem;
+    text-align: center;
+    color: black;
+    font-family: "Lato", sans-serif;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.montserrat{
+    font-family: "Montserrat", sans-serif;
+}
+
+.lato {
+    font-family: "Lato", sans-serif;
+}
+
+/*navbar*/
+.subrayado {
+    text-decoration: underline rgb(232, 151, 174) solid;
+}
+
+/*formulario - uso de :ctive para indicar que se activara en ese boton*/
+.boton :active{
+    background-color: rgb(195, 191, 225);
+}
+
+
+.icon{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/*GRID AREA-opciones*/
+
+.gridArea1{
+    display: grid;
+    grid-template-columns: 50% 100%;
+    grid-template-rows: 100%;
+    justify-content: space-around;
+    grid-template-areas: "caja1" "caja2";
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.gridArea1 .caja1{
+    grid-area: caja1;
+    background-color: rgb(237, 202, 213) ;
+}
+
+.gridArea1 .caja2{
+    grid-area: caja2;
+}
+
+
+.grid-Area{
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "planta planta mesa mesa"
+    "planta planta  mesa mesa"
+    "gato gato flor edificio"
+    "gato gato flor edificio";
+    margin: 0 auto;
+    width: 700px;
+    height: 700px;
+    position: relative;
+    background-color: rgb(229, 144, 189);
+    gap: 0.5rem ;
+    padding: 1rem;
+}
+
+.grid-Area img{
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+}
+
+.grid-Area .planta{
+    grid-area: planta;
+    border-radius: 20%;
+}
+
+.grid-Area .mesa{
+    grid-area: mesa;
+    object-fit: fill;
+    object-position: center;
+    border: 1rem solid rgb(164, 241, 216);
+}
+
+.grid-Area .gato{
+    grid-area: gato;
+}
+
+.grid-Area .flor{
+    grid-area: flor;
+}
+
+.grid-Area .edificio{
+    grid-area: edificio;
+}
+
+/*animacion*/
+
+.card{
+    width: 30rem;
+    height: 30rem;
+    position: relative;
+    margin: 1rem auto;
+    background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%); ;
+}
+
+.card div{
+    transition: 5s;
+    width: 100%;        
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* OBLIGATORIO en ambas caras para ocultar el reverso */
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card .frente{
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.card .frente img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .detras{
+    background-color: #08afbe;
+    transform: perspective(600px) rotateY(180deg);
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover .frente{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .detras{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+/*seccion de contacto*/
+.item {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    margin: auto;
+    font-size: 2.5rem;
+}
+
+
+.mapa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+
+/*RESPONSIVE ( se adapta a dispositivos moviles con enfoque desktop*/
+@media screen and (max-width: 768px) {
+
+nav {
+    font-size: 1rem;
+    padding: auto;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+ul {
+    list-style: none; /* sin viñetas en la lista*/
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    display: flex;
+    flex-direction: column; /* Pone un campo debajo del otro */
+    gap: 0.5rem;              /* Separa las celdas equitativamente */
+    align-items: center; /* Alinea todo al centro */
+    justify-content: center; /*centro horizontal*/
+}
+
+
+input, textarea {
+    font-size: 1.5rem;
+}
+
+
+footer {
+    text-align:center;
+    font-size: 0.5rem;
+    color: rgb(236, 99, 99);
+}
+
+.tipografia1 {
+    font-size: 2rem;
+    color: rgb(76, 74, 74);
+    text-decoration: underline;
+    text-align: center;
+    background-color: rgb(232, 151, 174);
+    margin: auto;
+    padding: 0.5rem;
+}
+
+.tipografia2 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: rgb(76, 74, 74);
+    background-color: rgb(232, 151, 174);
+    margin: 1rem;
+}
+
+.tipografia3{
+    font-size: 1.5rem;
+    text-align: justify;
+    color: black;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+
+.logo img{
+    margin: 0.5rem;
+    padding: auto;
+    height: 9rem;        /* El alto debe ser igual al ancho */
+    border-radius: 70%;   /* Esto crea el efecto de círculo */
+}
+
+.movi-logo{
+    animation: swirl-in-fwd 0.8s ease-out both;
+    }
+
+@keyframes swirl-in-fwd {
+    0% {
+    transform: rotate(-540deg) scale(0);
+    opacity: 0;
+    }
+    100% {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+    }
+}
+
+/*flex entre el logo y el ul*/
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar-nav :hover{
+    background-color: rgb(237, 202, 213);
+}
+
+
+.gridArea1{
+    display: block;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.gridArea1 video{
+    width: 100%;
+    height: 100%;
+}
+
+
+.grid-Area{
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "planta planta mesa mesa"
+    "planta planta  mesa mesa"
+    "gato gato flor edificio"
+    "gato gato flor edificio";
+    margin: 0 auto;
+    width: 80%;
+    height: 80%;
+    position: relative;
+    background-color: rgb(229, 144, 189);
+    gap: 0.5rem ;
+    padding: 0.5rem;
+}
+
+/*animacion*/
+
+.card{
+    width: 15rem;
+    height: 15rem;
+    position: relative;
+    margin: 0.5rem auto;
+    background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%); ;
+}
+
+.card div{
+    transition: 5s;
+    width: 100%;        
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* OBLIGATORIO en ambas caras para ocultar el reverso */
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.card .frente{
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.card .frente img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .detras{
+    background-color: #e77ec5;
+    transform: perspective(600px) rotateY(180deg);
+    font-size: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card:hover .frente{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .detras{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+.item {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    margin: auto;
+    font-size: 1.5rem;
+    width: 50%;
+}
+
+.mapa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+}
