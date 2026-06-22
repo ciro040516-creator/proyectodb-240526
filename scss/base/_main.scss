@@ -1,0 +1,176 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+@use "../utilities/extend" as *;
+@use "../componentes/botones" as *;
+@use "../componentes/cards" as *;
+
+form{
+    @include flex (center, center);
+    /*
+    display: flex;
+    justify-content: center;
+    align-items: center;*/
+    flex-direction: column; /* Pone un campo debajo del otro */
+    gap: $med-primaria;              /* Separa las celdas equitativamente */
+    border: solid rgb(78, 78, 78);
+    background-color: $color-form-grid;
+
+        @include mobile{
+            margin: auto;
+        }
+
+    &:focus{
+    border-color: $color-focus-border;
+    box-shadow: $med-primaria $med-primaria $color-focus-border; /*usado para dar el efecto 3D*/
+}
+
+input, textarea {
+    font-size: $med-terciaria;
+    font-family: $font-lato;
+}
+}
+
+
+.tipografia2 {
+    font-size: $fontsize-tipog2-item;
+    text-align: $align-text;
+    color: $color-tipograf2;
+    background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
+    font-family: $font-montserrat;
+
+    @include mobile{
+        font-size: 1.5rem;
+        margin: 1rem;
+    }
+
+    .montserrat{
+    font-family: $font-montserrat;
+}
+}
+
+
+.tipografia3{
+    font-size: $med-terciaria;
+    text-align: $align-text;
+    color: $color-tipograf3;
+    font-family: $font-lato;
+    margin:$med-primaria;
+    padding: $med-primaria;
+
+    .lato {
+    font-family: $font-lato;
+    }
+}
+
+.gridArea1{
+    display: grid;
+    grid-template-columns: 50% 100%;
+    grid-template-rows: 100%;
+    justify-content: space-around;
+    grid-template-areas: "caja1" "caja2";
+    align-items: center;
+    gap: $med-secundaria;
+    padding: $med-primaria;
+
+        @include mobile{
+            display: block;
+            align-items: center;
+            gap: 0.5rem;
+                video{
+                    width: 100%;
+                    height: 100%;
+                }
+        }
+
+    .caja1{
+    grid-area: caja1;
+    background-color: $color-hover-caja1;
+    }
+    .caja2{
+    grid-area: caja2;
+    }
+}
+
+.grid-Area{
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "planta planta mesa mesa"
+    "planta planta  mesa mesa"
+    "gato gato flor edificio"
+    "gato gato flor edificio";
+    margin: 0 auto;
+    width: 700px;
+    height: 700px;
+    position: relative;
+    background-color: $color-form-grid;
+    gap: $med-primaria;
+    padding: $med-secundaria;
+
+        @include mobile{
+            width: 80%;
+            height: 80%;
+            padding: 0.5rem;
+        }
+
+    img{
+    @extend %contenedor-img;
+    }
+
+    .planta{
+    grid-area: planta;
+    border-radius: 20%;
+    }
+
+    .mesa{
+    grid-area: mesa;
+    object-fit: fill;
+    object-position: center;
+    border: $med-secundaria solid $color-focus-border;
+    }
+
+    .gato{
+    grid-area: gato;
+    }
+
+    .flor{
+    grid-area: flor;
+    }
+
+    .edificio{
+    grid-area: edificio;
+    }
+}
+
+
+.item {
+    @include flex (center, center);
+    /*
+    display: flex;
+    justify-content: center;
+    align-items: center;*/
+    padding:$med-secundaria;
+    font-size: $fontsize-tipog2-item;
+
+    @include mobile{
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 1.5rem;
+        width: 50%;
+        margin: auto;
+    }
+}
+
+.mapa{
+    @include flex (center, center);
+    /*
+    display: flex;
+    justify-content: center;
+    align-items: center;*/
+    margin: $med-secundaria;
+}
+
+
+
+

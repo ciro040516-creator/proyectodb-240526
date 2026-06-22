@@ -1,0 +1,13 @@
+@use "./variables" as *;
+
+@mixin flex($justify-content, $align-items) {
+    display: flex;
+    justify-content: $justify-content; /*centro horizontal*/
+    align-items: $align-items; /* Alinea todo al centro */
+}
+
+@mixin mobile {
+    @media (max-width: $med-mobile) {
+        @content
+    }
+}

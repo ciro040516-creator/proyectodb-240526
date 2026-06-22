@@ -1,0 +1,78 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+@use "../componentes/navs" as *;
+
+header nav.mobile{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 80vw;
+        margin: $med-primaria auto;
+}
+
+
+.tipografia1 {
+    font-size: $fontsize-title;
+    color: $color-tipograf1;
+    text-decoration: $deco-subrayado;
+    text-align: $align-text;
+    font-family: $font-montserrat;
+    margin: auto;
+    padding: $padding-title;
+    background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
+
+    @include mobile{
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .montserrat{
+    font-family: $font-montserrat;
+}
+}
+
+.position {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.flex{
+    @include flex(space-around, center);
+    /*
+    display: flex;
+    align-items: center;
+    justify-content: space-around;*/
+}
+
+    .logo img{
+    margin: $med-secundaria;
+    padding: auto;
+    height: $height-img;        /* El alto debe ser igual al ancho */
+    border-radius: 70%;   /* Esto crea el efecto de círculo */
+    
+    @include mobile{
+        margin: 0.5rem;
+        height: 9rem;
+    }
+}
+
+    .movi-logo{
+    animation: swirl-in-fwd 0.8s ease-out both;
+
+@keyframes swirl-in-fwd {
+    0% {
+    transform: rotate(-540deg) scale(0);
+    opacity: 0;
+    }
+    100% {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+    }
+}
+}
+
+
+
+
+

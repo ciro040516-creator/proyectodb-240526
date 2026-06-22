@@ -1,0 +1,41 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+
+nav {
+    font-size: $fontsize-nav;
+    padding: auto;
+    gap: $med-secundaria;
+    width: 100%;
+
+        @include mobile{
+            font-size: $med-secundaria;
+            gap: $med-primaria;
+            }
+
+    ul {
+    list-style: $style-nav; /* sin viñetas en la lista*/
+    display: flex;
+    justify-content: space-around;
+
+        @include mobile {
+        flex-direction: column;
+        }
+    }
+
+    li>a {
+    color: $color-li;
+    text-decoration: $style-nav;
+
+    &:hover{
+    background-color: $color-hover-caja1;
+    }
+}
+}
+
+.subrayado {
+    text-decoration: $deco-subrayado $color-subrayado solid;
+}
+
+.navbar-nav :hover{
+    background-color: $color-hover-caja1;
+}

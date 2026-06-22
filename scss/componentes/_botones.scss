@@ -1,0 +1,13 @@
+@use "../utilities/variables" as *;
+
+button{
+    font-size: $med-terciaria;
+    background-color: $color-button;
+    margin: $med-terciaria;
+    align-items: $align-button;
+    border-radius: $med-primaria;
+
+    &:active{
+        background-color: rgb(164, 241, 216) ;
+    }
+}

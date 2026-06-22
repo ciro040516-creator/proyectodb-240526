@@ -1,0 +1,60 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+@use "../utilities/extend" as *;
+
+
+.card{
+    width: 30rem;
+    height: 30rem;
+    position: relative;
+    margin: $med-secundaria auto;
+    background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%); ;
+    
+        @include mobile{
+            width: 15rem;
+            height: 15rem;
+            margin: 0.5rem auto;
+        }
+
+    div{
+    @extend %transicion-div;
+    position: absolute;
+    backface-visibility: hidden; /* OBLIGATORIO en ambas caras para ocultar el reverso */
+    border-radius: $med-secundaria;
+    overflow: hidden;
+    }
+
+    .frente{
+    transform: perspective(600px) rotateY(0deg);
+
+    img{
+    @extend %contenedor-card;
+    }
+}
+
+    &:hover .frente{
+    transform: perspective(600px) rotateY(180deg);
+    }
+
+    .detras{
+    background-color: $color-card;
+    transform: perspective(600px) rotateY(180deg);
+    font-size: $med-terciaria;
+
+    @include flex (center, center);
+    /*
+    display: flex;
+    justify-content: center;
+    align-items: center;*/
+    flex-direction: column;
+
+        @include mobile {
+            font-size: 0.5rem;
+            background-color: #e77ec5;
+        }
+    }
+
+    &:hover .detras{
+    transform: perspective(600px) rotateY(360deg);
+    }
+}
