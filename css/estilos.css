@@ -224,9 +224,14 @@ form:focus {
   border-color: rgb(164, 241, 216);
   box-shadow: 0.5rem 0.5rem rgb(164, 241, 216); /*usado para dar el efecto 3D*/
 }
-form input, form textarea {
+form input, form textarea, form label {
   font-size: 1.5rem;
   font-family: "Lato", sans-serif;
+}
+@media (max-width: 575px) {
+  form input, form textarea, form label {
+    width: 100%;
+  }
 }
 
 .tipografia2 {

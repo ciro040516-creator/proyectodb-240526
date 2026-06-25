@@ -24,9 +24,13 @@ form{
     box-shadow: $med-primaria $med-primaria $color-focus-border; /*usado para dar el efecto 3D*/
 }
 
-input, textarea {
+input, textarea, label {
     font-size: $med-terciaria;
     font-family: $font-lato;
+
+    @include windows{
+        width: 100%;
+    }
 }
 }
 
