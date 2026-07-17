@@ -28,6 +28,8 @@ input, textarea, label {
     font-size: $med-terciaria;
     font-family: $font-lato;
 
+    @include flex (center, center);
+
     @include windows{
         width: 100%;
     }

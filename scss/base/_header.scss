@@ -43,6 +43,17 @@ header nav.mobile{
     display: flex;
     align-items: center;
     justify-content: space-around;*/
+
+    @include mobile{
+        @include flex(space-around, center);
+        flex-direction: column;
+}
+
+li{
+    @include mobile{
+        @include flex(center, center);
+    }
+}
 }
 
     .logo img{
@@ -50,10 +61,13 @@ header nav.mobile{
     padding: auto;
     height: $height-img;        /* El alto debe ser igual al ancho */
     border-radius: 70%;   /* Esto crea el efecto de círculo */
+    border: solid black;
     
     @include mobile{
         margin: 0.5rem;
         height: 9rem;
+
+        @include flex(space-around, center);
     }
 }
 

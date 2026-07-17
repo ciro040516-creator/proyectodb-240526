@@ -65,23 +65,15 @@
 
         <!--Seccion de contactos-->
         <section>
-            <h2 class="tipografia2 montserrat">Contactanos completando el siguiente formulario:</h2>
-            <form action="#" method="get" action="/send/" class="tipografia3 lato :focus" enctype="text/plain">
+            <h2 class="tipografia2 montserrat">Contactanos</h2>
+            <form action="https://formsubmit.co/ciro040516@gmail.com" method="post" class="tipografia3 lato :focus" enctype="text/plain">
                 <div>
                     <label for="Nombre">Nombre:</label>
                     <input type="text" name="Nombre" id="Nombre" aria-required="true">
                 </div>
                 <div>
-                    <label for="Apellido">Apellido:</label>
-                    <input type="text" name="Apellido" id="Apellido" aria-required="true">
-                </div>
-                <div>
                     <label for="Celular">Celular:</label>
                     <input type="tel" name="Celular" id="Celular" aria-required="true">
-                </div>
-                <div>
-                    <label for="Dirección">Dirección:</label>
-                    <input type="text" name="Direccion" id="Direccion" aria-required="true">
                 </div>
                 <div>
                     <label for="Localidad">Localidad:</label>
@@ -94,6 +86,7 @@
                 <div>
                     <label for="Mensaje">Mensaje:</label>
                     <textarea rows="2" cols="20"></textarea>
+                    <input type="hidden" name="_captcha" value="false">
                 </div>
                 <div class="boton">
                     <button type="submit">Enviar</button>
