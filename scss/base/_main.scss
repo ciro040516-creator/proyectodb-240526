@@ -12,6 +12,9 @@ form{
     align-items: center;*/
     flex-direction: column; /* Pone un campo debajo del otro */
     gap: $med-primaria;              /* Separa las celdas equitativamente */
+    max-width: 50rem;
+    width: 100%;
+    margin: auto;
     border: solid rgb(78, 78, 78);
     background-color: $color-form-grid;
 
@@ -34,6 +37,10 @@ input, textarea, label {
         width: 100%;
     }
 }
+}
+
+.contenedor{
+    @include flex(center, center);
 }
 
 
