@@ -130,8 +130,7 @@ header nav.mobile {
   margin: 1rem;
   padding: auto;
   height: 15rem; /* El alto debe ser igual al ancho */
-  border-radius: 70%; /* Esto crea el efecto de círculo */
-  border: solid black;
+  border-radius: 80%; /* Esto crea el efecto de círculo */
 }
 @media (max-width: 768px) {
   .logo img {

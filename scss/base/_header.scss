@@ -60,8 +60,7 @@ li{
     margin: $med-secundaria;
     padding: auto;
     height: $height-img;        /* El alto debe ser igual al ancho */
-    border-radius: 70%;   /* Esto crea el efecto de círculo */
-    border: solid black;
+    border-radius: 80%;   /* Esto crea el efecto de círculo */
     
     @include mobile{
         margin: 0.5rem;
