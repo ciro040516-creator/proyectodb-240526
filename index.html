@@ -26,12 +26,19 @@
     <!--hace referencia a iconos-->
     <script src="https://kit.fontawesome.com/9e89734234.js" crossorigin="anonymous"></script>
 
+    <!--Lottie-->
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.4/dist/dotlottie-wc.js" type="module"></script>
+
 </head>
 
 <body>
 
     <header>
-        <div id="ww_bd5748d1341c4" v='1.3' loc='auto' a='{"t":"responsive","lang":"es","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>Más previsiones: <a href="https://tiempolargo.com/madrid_tiempo_25_dias/" id="ww_bd5748d1341c4_u" target="_blank">Tiempo en madrid en 25 días</a></div><script async src="https://app3.weatherwidget.org/js/?id=ww_bd5748d1341c4"></script>
+        <div id="ww_bd5748d1341c4" v='1.3' loc='auto'
+            a='{"t":"responsive","lang":"es","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
+            Más previsiones: <a href="https://tiempolargo.com/madrid_tiempo_25_dias/" id="ww_bd5748d1341c4_u"
+                target="_blank">Tiempo en madrid en 25 días</a></div>
+        <script async src="https://app3.weatherwidget.org/js/?id=ww_bd5748d1341c4"></script>
 
         <div class="tipografia1 montserrat position">
             <h1>Proyectos Di&Bere</h1>
@@ -54,46 +61,52 @@
 
     <main>
         <section>
-
             <h2 class="tipografia2 montserrat">¡Bienvenidos!</h2>
-            <div class="tipografia3 lato">
-                <p>El inicio de este proyecto se dio por diferente motivos, pero uno de ellos fue el poder generar
-                    nuevas oportunidades.</p>
-                <p>El primer paso no es fácil, el proceso es un largo camino pero con una vista asombrosa. Sueña a lo
-                    grande: LO IMPOSIBLE ES POSIBLE!</p>
+            <div class="gridAreaXY">
+            <div class="tipografia3 lato cajaX">
+                <p>Todo gran proyecto nace de la búsqueda de nuevas oportunidades. Así nació Proyectos Di&Bere, con la
+                    misión de impulsar el crecimiento digital de tu empresa.</p>
+                <p>En Proyectos Di&Bere transformamos tu presencia digital. Desarrollamos sitios web modernos, rápidos y
+                    optimizados que trasladan la calidez de tu negocio físico al mundo online. Dar el primer paso
+                    digital es un desafío, pero el destino vale la pena. ¡Sueña en grande, nosotros lo hacemos posible!
+                </p>
             </div>
-        </section>
+            <dotlottie-wc class="cajaY" src="https://lottie.host/8b08622a-3b6e-47fb-ac92-d04a95e25fb9/JL9YAYK8bC.json"
+                style="width: 350px;height: 350px" autoplay loop></dotlottie-wc>
+            </div>
+            </section>
 
         <!--Seccion de contactos-->
         <section>
             <h2 class="tipografia2 montserrat">Contactanos</h2>
             <div class="contenedor">
-            <form action="https://formsubmit.co/ciro040516@gmail.com" method="post" class="tipografia3 lato :focus" enctype="text/plain">
-                <div>
-                    <label for="Nombre">Nombre:</label>
-                    <input type="text" name="Nombre" id="Nombre" aria-required="true">
-                </div>
-                <div>
-                    <label for="Celular">Celular:</label>
-                    <input type="tel" name="Celular" id="Celular" aria-required="true">
-                </div>
-                <div>
-                    <label for="Localidad">Localidad:</label>
-                    <input type="text" name="Localidad" id="Localidad" aria-required="true">
-                </div>
-                <div>
-                    <label for="email">E-mail:</label>
-                    <input type="email" value="me@example.com" />
-                </div>
-                <div>
-                    <label for="Mensaje">Mensaje:</label>
-                    <textarea rows="2" cols="20"></textarea>
-                    <input type="hidden" name="_captcha" value="false">
-                </div>
-                <div class="boton">
-                    <button type="submit">Enviar</button>
-                </div>
-            </form>
+                <form action="https://formsubmit.co/ciro040516@gmail.com" method="post" class="tipografia3 lato :focus"
+                    enctype="text/plain">
+                    <div>
+                        <label for="Nombre">Nombre:</label>
+                        <input type="text" name="Nombre" id="Nombre" aria-required="true">
+                    </div>
+                    <div>
+                        <label for="Celular">Celular:</label>
+                        <input type="tel" name="Celular" id="Celular" aria-required="true">
+                    </div>
+                    <div>
+                        <label for="Localidad">Localidad:</label>
+                        <input type="text" name="Localidad" id="Localidad" aria-required="true">
+                    </div>
+                    <div>
+                        <label for="email">E-mail:</label>
+                        <input type="email" value="me@example.com" />
+                    </div>
+                    <div>
+                        <label for="Mensaje">Mensaje:</label>
+                        <textarea rows="2" cols="20"></textarea>
+                        <input type="hidden" name="_captcha" value="false">
+                    </div>
+                    <div class="boton">
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
             </div>
         </section>
 

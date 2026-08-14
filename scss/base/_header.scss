@@ -19,10 +19,11 @@ header nav.mobile{
     margin: auto;
     padding: $padding-title;
     background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
+    font-weight: bold;
 
     @include mobile{
         padding: 0.5rem;
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .montserrat{
