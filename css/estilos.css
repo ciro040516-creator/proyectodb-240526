@@ -588,6 +588,24 @@ h4 {
   }
 }
 
+.text {
+  color: black;
+  font-size: 2rem;
+  text-decoration: none;
+  animation: mover 10s ease-in-out 0s infinite;
+}
+@keyframes text {
+  40% {
+    color: rgb(15, 170, 232);
+  }
+  40% {
+    color: rgb(148, 11, 227);
+  }
+  20% {
+    color: rgb(239, 11, 102);
+  }
+}
+
 .mapa {
   display: flex;
   justify-content: center; /*centro horizontal*/
