@@ -42,6 +42,29 @@ h3{
     text-decoration: $deco-subrayado;
 }
 
+h4{
+    font-size: 2.5rem;
+    text-align: $align-text;
+    animation: mover 10s ease-in-out 0s infinite;
+    margin: $med-terciaria;
+
+    @include mobile{
+        font-size: $med-terciaria;
+    }
+
+    @keyframes mover{
+        40% {
+            color: rgb(231, 42, 212);
+        }
+        40% {
+            color: rgb(148, 11, 227);
+        }
+        20% {
+            color: rgb(239, 11, 102);
+        }
+}
+}
+
 .contenedor{
     @include flex(center, center);
 }
@@ -111,11 +134,20 @@ h3{
 }
 }
 
+.fotomia{
+    border-radius: 10%;
+
+    @include mobile{
+        display: block;
+        align-items: $align-text;
+    }
+}
+
 
 //seccion pagina dos
 .gridInit{
     display: grid;
-    grid-template-columns: 40% 50%;
+    grid-template-columns: 60% 40%;
     grid-template-rows: 90%;
     grid-template-areas: "initX initY";
     align-items: center;
@@ -132,15 +164,16 @@ h3{
     grid-area: initX;
     font-size: 1.5rem;
     text-align: $align-text;
+    }
 
-    @include mobile{
-        font-size: 1rem;
-    }
-    }
 
     .initY{
     grid-area: initY;
     margin: auto;
+
+    @include mobile{
+        align-items: $align-text;
+    }
 }
 }
 
@@ -156,16 +189,16 @@ h3{
     "gato gato flor edificio"
     "gato gato flor edificio";
     margin: 0 auto;
-    width: 700px;
-    height: 700px;
+    width: 400px;
+    height: 400px;
     position: relative;
     background-color: $color-form-grid;
     gap: $med-primaria;
     padding: $med-secundaria;
 
         @include mobile{
-            width: 80%;
-            height: 80%;
+            width: 300px;
+            height: 300px;
             padding: 0.5rem;
         }
 
@@ -237,8 +270,6 @@ h3{
     }
 }
 }
-
-
 .seccion2{
     grid-area: seccion2;
     background-color: rgb(146, 185, 186);

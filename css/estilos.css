@@ -170,17 +170,16 @@ button:active {
 }
 
 .card {
-  width: 30rem;
-  height: 30rem;
+  width: 20rem;
+  height: 20rem;
   position: relative;
   margin: 1rem auto;
   background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
 }
 @media (max-width: 768px) {
   .card {
-    width: 15rem;
-    height: 15rem;
-    margin: 0.5rem auto;
+    width: 12rem;
+    height: 12rem;
   }
 }
 .card div {
@@ -198,7 +197,7 @@ button:active {
 .card .detras {
   background-color: #08afbe;
   transform: perspective(600px) rotateY(180deg);
-  font-size: 1.5rem;
+  font-size: 1rem;
   display: flex;
   justify-content: center; /*centro horizontal*/
   align-items: center; /* Alinea todo al centro */
@@ -258,6 +257,29 @@ form input, form textarea, form label {
 
 h3 {
   text-decoration: underline;
+}
+
+h4 {
+  font-size: 2.5rem;
+  text-align: center;
+  animation: mover 10s ease-in-out 0s infinite;
+  margin: 1.5rem;
+}
+@media (max-width: 768px) {
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+@keyframes mover {
+  40% {
+    color: rgb(231, 42, 212);
+  }
+  40% {
+    color: rgb(148, 11, 227);
+  }
+  20% {
+    color: rgb(239, 11, 102);
+  }
 }
 
 .contenedor {
@@ -327,9 +349,19 @@ h3 {
   margin: auto;
 }
 
+.fotomia {
+  border-radius: 10%;
+}
+@media (max-width: 768px) {
+  .fotomia {
+    display: block;
+    align-items: center;
+  }
+}
+
 .gridInit {
   display: grid;
-  grid-template-columns: 40% 50%;
+  grid-template-columns: 60% 40%;
   grid-template-rows: 90%;
   grid-template-areas: "initX initY";
   align-items: center;
@@ -348,14 +380,14 @@ h3 {
   font-size: 1.5rem;
   text-align: center;
 }
-@media (max-width: 768px) {
-  .gridInit .initX {
-    font-size: 1rem;
-  }
-}
 .gridInit .initY {
   grid-area: initY;
   margin: auto;
+}
+@media (max-width: 768px) {
+  .gridInit .initY {
+    align-items: center;
+  }
 }
 
 .grid-Area {
@@ -364,8 +396,8 @@ h3 {
   grid-template-rows: repeat(4, 1fr);
   grid-template-areas: "planta planta mesa mesa" "planta planta  mesa mesa" "gato gato flor edificio" "gato gato flor edificio";
   margin: 0 auto;
-  width: 700px;
-  height: 700px;
+  width: 400px;
+  height: 400px;
   position: relative;
   background-color: rgb(239, 163, 204);
   gap: 0.5rem;
@@ -373,8 +405,8 @@ h3 {
 }
 @media (max-width: 768px) {
   .grid-Area {
-    width: 80%;
-    height: 80%;
+    width: 300px;
+    height: 300px;
     padding: 0.5rem;
   }
 }
