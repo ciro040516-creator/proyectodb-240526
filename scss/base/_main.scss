@@ -38,6 +38,7 @@ input, textarea, label {
     }
 }
 }
+
 h3{
     text-decoration: $deco-subrayado;
 }
@@ -63,6 +64,22 @@ h4{
             color: rgb(239, 11, 102);
         }
 }
+}
+
+iframe{
+    width: 70vw;
+    height: 70vh;
+    margin: $med-primaria;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    border-radius: 10%;
+
+    @include mobile{
+            display: block;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            gap: 0.5rem;
+        }
 }
 
 .contenedor{
@@ -347,36 +364,50 @@ h4{
 }
 
 //seccion pagina tres
-.gridArea1{
+.gridBloque{
     display: grid;
-    grid-template-columns: 50% 100%;
-    grid-template-rows: 100%;
-    justify-content: space-around;
-    grid-template-areas: "caja1" "caja2";
-    align-items: center;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:"text1 vista1"
+                        "text2 vista2";
     gap: $med-secundaria;
-    padding: $med-primaria;
+    margin: $med-secundaria;
+    align-items: center;
+    justify-items: center;
 
         @include mobile{
             display: block;
             align-items: center;
-            gap: 0.5rem;
-                iframe{
-                    width: 100%;
-                    height: 100%;
-                }
+            justify-content: center;
+            margin: auto;
         }
 
-    .caja1{
-    grid-area: caja1;
+    .text1{
+    grid-area: text1;
     font-size: 2rem;
-    background-color: $color-form-grid ;
+
+    @include mobile{
+        font-size: $med-terciaria;
     }
-    .caja2{
-    grid-area: caja2;
-    align-items: center;
+    }
+
+    .text2{
+    grid-area: text2;
+    font-size: 2rem;
+
+    @include mobile{
+        font-size: $med-terciaria;
+    }
+    }
+
+    .vista1{
+    grid-area: vista1;
+    }
+    .vista2{
+    grid-area: vista2;
     }
 }
+
 
 //seccion pagina cuatro
 .item {
