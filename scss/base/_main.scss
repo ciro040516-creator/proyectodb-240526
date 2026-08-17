@@ -66,20 +66,27 @@ h4{
 }
 }
 
-iframe{
-    width: 70vw;
+.bloque-iframe{
+    width: 40vw;
     height: 70vh;
+    margin: auto;
     margin: $med-primaria;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     border-radius: 10%;
 
     @include mobile{
-            display: block;
+            width: 90%;
+            max-height: 70vh;
+            display: flex;
             align-items: center;
-            justify-content: center;
             margin: auto;
+            padding: $med-secundaria;
             gap: 0.5rem;
-        }
+}
+
+    @include windows{
+        margin: 0.5rem;
+    }
 }
 
 .contenedor{
@@ -366,10 +373,9 @@ iframe{
 //seccion pagina tres
 .gridBloque{
     display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 50% 50%;
-    grid-template-areas:"text1 vista1"
-                        "text2 vista2";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    grid-template-areas: "vista1 vista2";
     gap: $med-secundaria;
     margin: $med-secundaria;
     align-items: center;
@@ -381,24 +387,6 @@ iframe{
             justify-content: center;
             margin: auto;
         }
-
-    .text1{
-    grid-area: text1;
-    font-size: 2rem;
-
-    @include mobile{
-        font-size: $med-terciaria;
-    }
-    }
-
-    .text2{
-    grid-area: text2;
-    font-size: 2rem;
-
-    @include mobile{
-        font-size: $med-terciaria;
-    }
-    }
 
     .vista1{
     grid-area: vista1;

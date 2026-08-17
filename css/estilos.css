@@ -282,20 +282,28 @@ h4 {
   }
 }
 
-iframe {
-  width: 70vw;
+.bloque-iframe {
+  width: 40vw;
   height: 70vh;
+  margin: auto;
   margin: 0.5rem;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   border-radius: 10%;
 }
 @media (max-width: 768px) {
-  iframe {
-    display: block;
+  .bloque-iframe {
+    width: 90%;
+    max-height: 70vh;
+    display: flex;
     align-items: center;
-    justify-content: center;
     margin: auto;
+    padding: 1rem;
     gap: 0.5rem;
+  }
+}
+@media (max-width: 575px) {
+  .bloque-iframe {
+    margin: 0.5rem;
   }
 }
 
@@ -555,9 +563,9 @@ iframe {
 
 .gridBloque {
   display: grid;
-  grid-template-columns: 30% 70%;
-  grid-template-rows: 50% 50%;
-  grid-template-areas: "text1 vista1" "text2 vista2";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  grid-template-areas: "vista1 vista2";
   gap: 1rem;
   margin: 1rem;
   align-items: center;
@@ -569,24 +577,6 @@ iframe {
     align-items: center;
     justify-content: center;
     margin: auto;
-  }
-}
-.gridBloque .text1 {
-  grid-area: text1;
-  font-size: 2rem;
-}
-@media (max-width: 768px) {
-  .gridBloque .text1 {
-    font-size: 1.5rem;
-  }
-}
-.gridBloque .text2 {
-  grid-area: text2;
-  font-size: 2rem;
-}
-@media (max-width: 768px) {
-  .gridBloque .text2 {
-    font-size: 1.5rem;
   }
 }
 .gridBloque .vista1 {
