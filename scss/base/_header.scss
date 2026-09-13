@@ -10,6 +10,7 @@ header nav.mobile{
 }
 
 
+/*
 .tipografia1 {
     font-size: $fontsize-title;
     color: $color-tipograf1;
@@ -35,39 +36,43 @@ header nav.mobile{
     position: sticky;
     top: 0;
     z-index: 1000;
-}
+}*/
 
 
 .flex{
     @include flex(space-around, center);
+    margin: $med-terciaria;
     /*
     display: flex;
     align-items: center;
     justify-content: space-around;*/
 
-    @include mobile{
-        @include flex(space-around, center);
-        flex-direction: column;
+    @include windows{
+        @include flex(space-between, center);
+        flex-direction: row;
+        gap: $med-terciaria;
+        margin: $med-primaria;
 }
 
-li{
+/*ul{
     @include mobile{
         @include flex(center, center);
+        flex-direction: column;
     }
-}
+}*/
 }
 
     .logo img{
-    margin: $med-secundaria;
+    margin: $med-primaria;
     padding: auto;
     height: $height-img;        /* El alto debe ser igual al ancho */
-    border-radius: 80%;   /* Esto crea el efecto de círculo */
+    border-radius: 100%;   /* Esto crea el efecto de círculo */
     
     @include mobile{
-        margin: 0.5rem;
-        height: 9rem;
+        margin: $med-primaria;
+        height: 8rem;
 
-        @include flex(space-around, center);
+        @include flex(center, center);
     }
 }
 

@@ -31,6 +31,10 @@
   margin: 0;
 }
 
+body {
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+}
+
 nav {
   font-size: 2rem;
   padding: auto;
@@ -76,70 +80,74 @@ header nav.mobile {
   margin: 0.5rem auto;
 }
 
+/*
 .tipografia1 {
-  font-size: 10rem;
-  color: rgb(42, 39, 39);
-  text-decoration: underline;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  margin: auto;
-  padding: 2rem;
-  background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
-  font-weight: bold;
+    font-size: $fontsize-title;
+    color: $color-tipograf1;
+    text-decoration: $deco-subrayado;
+    text-align: $align-text;
+    font-family: $font-montserrat;
+    margin: auto;
+    padding: $padding-title;
+    background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
+    font-weight: bold;
+
+    @include mobile{
+        padding: 0.5rem;
+        font-size: 3rem;
+    }
+
+    .montserrat{
+    font-family: $font-montserrat;
 }
-@media (max-width: 768px) {
-  .tipografia1 {
-    padding: 0.5rem;
-    font-size: 3rem;
-  }
-}
-.tipografia1 .montserrat {
-  font-family: "Montserrat", sans-serif;
 }
 
 .position {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}*/
 .flex {
   display: flex;
   justify-content: space-around; /*centro horizontal*/
   align-items: center; /* Alinea todo al centro */
+  margin: 1.5rem;
   /*
   display: flex;
   align-items: center;
   justify-content: space-around;*/
 }
-@media (max-width: 768px) {
+@media (max-width: 575px) {
   .flex {
     display: flex;
-    justify-content: space-around; /*centro horizontal*/
+    justify-content: space-between; /*centro horizontal*/
     align-items: center; /* Alinea todo al centro */
-    flex-direction: column;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin: 0.5rem;
   }
 }
-@media (max-width: 768px) {
-  .flex li {
-    display: flex;
-    justify-content: center; /*centro horizontal*/
-    align-items: center; /* Alinea todo al centro */
-  }
+.flex {
+  /*ul{
+      @include mobile{
+          @include flex(center, center);
+          flex-direction: column;
+      }
+  }*/
 }
 
 .logo img {
-  margin: 1rem;
+  margin: 0.5rem;
   padding: auto;
-  height: 15rem; /* El alto debe ser igual al ancho */
-  border-radius: 80%; /* Esto crea el efecto de círculo */
+  height: 10rem; /* El alto debe ser igual al ancho */
+  border-radius: 100%; /* Esto crea el efecto de círculo */
 }
 @media (max-width: 768px) {
   .logo img {
     margin: 0.5rem;
-    height: 9rem;
+    height: 8rem;
     display: flex;
-    justify-content: space-around; /*centro horizontal*/
+    justify-content: center; /*centro horizontal*/
     align-items: center; /* Alinea todo al centro */
   }
 }
@@ -341,6 +349,11 @@ h4 {
 .tipografia3 .lato {
   font-family: "Lato", sans-serif;
 }
+@media (max-width: 768px) {
+  .tipografia3 {
+    font-size: 1rem;
+  }
+}
 
 .gridAreaXY {
   display: grid;
@@ -474,7 +487,7 @@ h4 {
 }
 .secciones .seccion1 {
   grid-area: seccion1;
-  background-color: #f5d1cf;
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   border-radius: 10%;
   -webkit-animation: slide-in-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -493,7 +506,7 @@ h4 {
 }
 .secciones .seccion2 {
   grid-area: seccion2;
-  background-color: rgb(146, 185, 186);
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   border-radius: 10%;
   -webkit-animation: slide-in-right 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-right 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -512,7 +525,7 @@ h4 {
 }
 .secciones .seccion3 {
   grid-area: seccion3;
-  background-color: rgb(241, 233, 165);
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   border-radius: 10%;
   -webkit-animation: slide-in-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -531,7 +544,7 @@ h4 {
 }
 .secciones .seccion4 {
   grid-area: seccion4;
-  background-color: #ddd6f3;
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   border-radius: 10%;
   -webkit-animation: slide-in-right 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-right 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -559,6 +572,13 @@ h4 {
 .secciones .negrita {
   font-weight: bold;
   color: rgb(53, 52, 52);
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  .secciones .negrita {
+    font-size: 0.8rem;
+  }
 }
 .secciones .vigencia {
   font-size: 0.7rem;
@@ -566,6 +586,19 @@ h4 {
   font-style: italic; /* Letra cursiva para denotar aclaración */
   margin-top: 0.5rem; /* Separación del resto de los precios */
   line-height: 1.3;
+}
+.secciones .seccion_nav {
+  text-align: center;
+  list-style: inside;
+  list-style-type: "⭐";
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+}
+@media (max-width: 768px) {
+  .secciones .seccion_nav {
+    font-size: 0.6rem;
+  }
 }
 
 .gridBloque {
