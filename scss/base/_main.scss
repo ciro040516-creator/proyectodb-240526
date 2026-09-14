@@ -137,42 +137,37 @@ h4{
     grid-template-areas: "cajaX cajaY";
     align-items: center;
     gap: $med-secundaria;
-    padding: $med-primaria;
+    padding: $med-secundaria;
 
         @include mobile{
-            display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: $align-text;
             gap: $med-primaria;
         }
 
     .cajaX{
     grid-area: cajaX;
-    font-size: 1.5rem;
-
-    @include mobile{
-        font-size: 1rem;
-    }
     }
 
     .cajaY{
     grid-area: cajaY;
+    margin: $med-terciaria;
+}
+}
+
+dotlottie-wc{
     border-radius: 50%;
     border: solid $color-form-grid;
-    margin: auto;
-}
-}
-
-.fotomia{
-    border-radius: 10%;
-
-    @include mobile{
-        display: block;
-        align-items: $align-text;
     }
-}
+
+    .fotomia{
+        border-radius: 10%;
+    }
 
 
-//seccion pagina dos
+/*seccion pagina dos - reemplazada en como iniciamos
 .gridInit{
     display: grid;
     grid-template-columns: 60% 40%;
@@ -202,11 +197,12 @@ h4{
     @include mobile{
         align-items: $align-text;
     }
-}
-}
+    }
+}*/
 
 
-//seccion pagina dos
+
+/*seccion pagina dos - ocultos en la pagina de inicio
 .grid-Area{
     display: grid;
     grid-template-columns: 1fr repeat(3, 1fr);
@@ -257,7 +253,7 @@ h4{
     .edificio{
     grid-area: edificio;
     }
-}
+}*/
 
 
 
@@ -401,7 +397,7 @@ h4{
 } 
 }
 
-//seccion pagina tres
+/*seccion pagina tres - oculto vista previa
 .gridBloque{
     display: grid;
     grid-template-columns: 50% 50%;
@@ -425,7 +421,7 @@ h4{
     .vista2{
     grid-area: vista2;
     }
-}
+}*/
 
 
 //seccion pagina cuatro
