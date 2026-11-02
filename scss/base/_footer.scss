@@ -18,5 +18,27 @@ footer {
     }
 }
 
+.icon{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    
+    @include flex (space-around, center);
+    padding: $med-primaria;
+    font-size: $med-primaria;
+    background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
+
+    .footer-text{
+        font-family: $font-lato;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .lato {
+    font-family: $font-lato;
+    }
+}
+
 
 
