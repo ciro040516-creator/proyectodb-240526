@@ -12,8 +12,8 @@
     }
 }
 
-@mixin windows{
-    @media (max-width: $med-windows){
+@mixin small{
+    @media (max-width: $med-small){
         @content;
     }
 }

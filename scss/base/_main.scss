@@ -4,38 +4,48 @@
 @use "../componentes/botones" as *;
 @use "../componentes/cards" as *;
 
-form{
-    @include flex (center, center);
-    /*
-    display: flex;
-    justify-content: center;
-    align-items: center;*/
-    flex-direction: column; /* Pone un campo debajo del otro */
-    gap: $med-primaria;              /* Separa las celdas equitativamente */
-    max-width: 50rem;
+.banner{
+    overflow: hidden;
     width: 100%;
-    margin: auto;
-    border: solid rgb(78, 78, 78);
-    background-color: $color-form-grid;
+    margin: $med-secundaria;
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 
-        @include mobile{
-            margin: auto;
-        }
+.container-banner{
+    display: flex;
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: carrusel-infinito 20s linear infinite;
 
-    &:focus{
-    border-color: $color-focus-border;
-    box-shadow: $med-primaria $med-primaria $color-focus-border; /*usado para dar el efecto 3D*/
+    @keyframes carrusel-infinito {
+    0% {
+    transform: translate3d(0, 0, 0);
+    }
+    100% {
+    transform: translate3d(-50%, 0, 0); 
+    }
 }
 
-input, textarea, label {
+.distancia{
+    flex-shrink: 0;
+    padding-right: 50px;
+
+.banner-text{
     font-size: $med-terciaria;
-    font-family: $font-lato;
+    font-family: $font-montserrat;
+    text-align: center;
+    padding: $med-primaria;
+    word-spacing: 30px;
+    white-space: nowrap;
 
-    @include flex (center, center);
-
-    @include windows{
-        width: 100%;
+    @include mobile{
+        font-size: 1.2rem;
     }
+
+    @include mobile{
+        font-size: $med-secundaria;
+    }
+}
+}
 }
 }
 
@@ -66,44 +76,27 @@ h4{
 }
 }
 
-.bloque-iframe{
-    width: 40vw;
-    height: 70vh;
-    margin: auto;
-    margin: $med-primaria;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    border-radius: 10%;
-
-    @include mobile{
-            width: 90%;
-            max-height: 70vh;
-            display: flex;
-            align-items: center;
-            margin: auto;
-            padding: $med-secundaria;
-            gap: 0.5rem;
-}
-
-    @include windows{
-        margin: 0.5rem;
-    }
-}
-
 .contenedor{
     @include flex(center, center);
 }
 
 
 .tipografia2 {
-    font-size: $fontsize-tipog2-item;
+    font-size: 2.5rem;
     text-align: $align-text;
     color: $color-tipograf2;
     background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
     font-family: $font-montserrat;
+    font-weight: bold;
 
     @include mobile{
-        font-size: 1.5rem;
-        margin: 1rem;
+        font-size: $med-cuarta;
+        margin: $med-secundaria;
+    }
+
+    @include small{
+        font-size: $med-terciaria;
+        margin: $med-primaria;
     }
 
     .montserrat{
@@ -115,9 +108,8 @@ h4{
 .tipografia3{
     font-size: $med-terciaria;
     text-align: $align-text;
-    color: $color-tipograf3;
+    color: black;
     font-family: $font-lato;
-    margin:$med-primaria;
     padding: $med-primaria;
 
     .lato {
@@ -125,8 +117,13 @@ h4{
     }
 
     @include mobile{
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
+
+    @include small{
+        font-size: $med-secundaria;
+    }
+
 }
 
 //seccion pagina uno
@@ -136,15 +133,16 @@ h4{
     grid-template-rows: 90%;
     grid-template-areas: "cajaX cajaY";
     align-items: center;
-    gap: $med-secundaria;
-    padding: $med-secundaria;
+    gap: $med-primaria;
+    padding: $med-primaria;
+    width: 100%;
 
         @include mobile{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: $align-text;
-            gap: $med-primaria;
+            gap: 0;
         }
 
     .cajaX{
@@ -153,109 +151,99 @@ h4{
 
     .cajaY{
     grid-area: cajaY;
-    margin: $med-terciaria;
+    margin: $med-primaria;
 }
 }
 
 dotlottie-wc{
     border-radius: 50%;
     border: solid $color-form-grid;
-    }
-
-    .fotomia{
-        border-radius: 10%;
-    }
-
-
-/*seccion pagina dos - reemplazada en como iniciamos
-.gridInit{
-    display: grid;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: 90%;
-    grid-template-areas: "initX initY";
-    align-items: center;
-    gap: $med-secundaria;
-    padding: $med-primaria;
-
-        @include mobile{
-            display: block;
-            align-items: $align-text;
-            gap: $med-primaria;
-        }
-
-    .initX{
-    grid-area: initX;
-    font-size: 1.5rem;
-    text-align: $align-text;
-    }
-
-
-    .initY{
-    grid-area: initY;
-    margin: auto;
+    width: 350px;
+    height: 350px;
 
     @include mobile{
-        align-items: $align-text;
+        width: 250px;
+        height: 250px;
+    }
+
+    @include small{
+        width: 200px;
+        height: 200px;
     }
     }
-}*/
 
+.flex-card{
+    width: 100%;
+    flex-direction: row;
+    @include flex(space-around, center);
 
+    .card{
+    max-width: 18rem;
+    align-items: center;
 
-/*seccion pagina dos - ocultos en la pagina de inicio
-.grid-Area{
-    display: grid;
-    grid-template-columns: 1fr repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: 
-    "planta planta mesa mesa"
-    "planta planta  mesa mesa"
-    "gato gato flor edificio"
-    "gato gato flor edificio";
-    margin: 0 auto;
-    width: 400px;
-    height: 400px;
-    position: relative;
-    background-color: $color-form-grid;
-    gap: $med-primaria;
+    @include mobile{
+        flex-wrap: wrap;
+        margin: $med-primaria;
+        max-width: 16rem;
+    }
+
+    @include small{
+        margin: $med-primaria;
+        gap: $med-primaria;
+        max-width: 15rem;
+    }
+
+    .card-body{
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    @include flex (center, center);
+    flex-direction: column;
+    border: $color-card 0.3rem solid;
     padding: $med-secundaria;
+    gap: $med-secundaria;
+
+    @include mobile{
+        gap: $med-primaria;
+    }
+
+    .fa-mobile, .fa-laptop, .fa-brush{
+        font-size: $med-cuarta;
 
         @include mobile{
-            width: 300px;
-            height: 300px;
-            padding: 0.5rem;
+            font-size: 1.2rem;
+        }
+        @include small{
+            font-size: $med-secundaria;
+        }
+    }
+
+    h5{
+        font-size: $med-terciaria;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+
+        @include small{
+            font-size: 0.8rem;
+        }
+    }
+
+    .card-text{
+        font-size: $med-secundaria;
+        font-family: $font-lato;
+        text-align: center;
+
+        @include mobile{
+            font-size: 0.8rem;
         }
 
-    img{
-    @extend %contenedor-img;
+        @include small{
+            font-size: $med-primaria;
+        }
     }
-
-    .planta{
-    grid-area: planta;
-    border-radius: 20%;
-    }
-
-    .mesa{
-    grid-area: mesa;
-    object-fit: fill;
-    object-position: center;
-    border: $med-secundaria solid $color-focus-border;
-    }
-
-    .gato{
-    grid-area: gato;
-    }
-
-    .flor{
-    grid-area: flor;
-    }
-
-    .edificio{
-    grid-area: edificio;
-    }
-}*/
-
-
+}
+}
+}
 
 //seccion pagina tres
 .secciones{
@@ -267,20 +255,27 @@ dotlottie-wc{
     gap: $med-secundaria;
     margin: $med-secundaria;
     padding: $med-secundaria;
-    align-items: center;
+    width: 100%;
 
     @include mobile{
-            display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
+            max-width: 600px;
+            margin: 0 auto;
             gap: $med-primaria;
+    }
+
+    @include small{
+        max-width: 500px;
     }
 
 .seccion1{
     grid-area: seccion1;
+    border: $color-card 2px solid;
     background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-    border-radius: 10%;
-    -webkit-animation: slide-in-left 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-left 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-in-left 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 @keyframes slide-in-left {
     0% {
     -webkit-transform: translateX(-1000px);
@@ -296,10 +291,9 @@ dotlottie-wc{
 }
 .seccion2{
     grid-area: seccion2;
+    border: $color-card 2px solid;
     background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-    border-radius: 10%;
-    -webkit-animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
         @keyframes slide-in-right {
     0% {
@@ -316,10 +310,9 @@ dotlottie-wc{
 }
 .seccion3{
     grid-area: seccion3;
+    border: $color-card 2px solid;
     background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-    border-radius: 10%;
-    -webkit-animation: slide-in-left 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-left 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-in-left 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 @keyframes slide-in-left {
     0% {
     -webkit-transform: translateX(-1000px);
@@ -335,10 +328,9 @@ dotlottie-wc{
 }
 .seccion4{
     grid-area: seccion4;
+    border: $color-card 2px solid;
     background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-    border-radius: 10%;
-    -webkit-animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-in-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
         @keyframes slide-in-right {
     0% {
@@ -354,13 +346,30 @@ dotlottie-wc{
 }
 }
 
-.tipografia4{
-    font-size: $med-secundaria;
+.title-sec{
     font-family: $font-montserrat;
-    text-align: $align-text;
+    font-size: $med-terciaria;
+    text-align: center;
+
+    @include small{
+        font-size: $med-secundaria;
+    }
 
     .montserrat{
-    font-family: $font-montserrat;
+        font-family: $font-montserrat;
+    }
+}
+
+.tipografia4{
+    font-size: $med-secundaria;
+    font-family: $font-lato;
+    text-align: $align-text;
+
+    .lato{
+    font-family: $font-lato;
+}
+@include small{
+    font-size: 0.8rem;
 }
 }
 
@@ -369,81 +378,48 @@ dotlottie-wc{
     color: $color-tipograf2;
     font-family: $font-lato;
     font-size: 1rem;
+    text-align: center;
 
     @include mobile{
         font-size: 0.8rem;
     }
 }
 
-.vigencia{
-    font-size: 0.7rem;
-    color: #757575;    /* Un tono grisáceo profesional */
-    font-style: italic; /* Letra cursiva para denotar aclaración */
-    margin-top: 0.5rem;   /* Separación del resto de los precios */
-    line-height: 1.3;
-}
-
 .seccion_nav{
     text-align: center;
     list-style: inside;
-    list-style-type: "⭐";
+    list-style-type: "✅";
     font-weight: bold;
-    font-family: $font-montserrat;
-    font-size: 0.8rem;
+    font-family: "Cormorant Garamond", serif;
+    font-size: $med-secundaria;
 
     @include mobile{
-        font-size: 0.6rem;
+        font-size: 0.8rem;
     }
 } 
 }
 
-/*seccion pagina tres - oculto vista previa
-.gridBloque{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
-    grid-template-areas: "vista1 vista2";
-    gap: $med-secundaria;
-    margin: $med-secundaria;
-    align-items: center;
-    justify-items: center;
 
-        @include mobile{
-            display: block;
-            align-items: center;
-            justify-content: center;
-            margin: auto;
-        }
-
-    .vista1{
-    grid-area: vista1;
-    }
-    .vista2{
-    grid-area: vista2;
-    }
-}*/
-
-
-//seccion pagina cuatro
+//pagina contacto
 .item {
     @include flex (center, center);
-    /*
-    display: flex;
-    justify-content: center;
-    align-items: center;*/
-    padding:$med-secundaria;
-    font-size: $fontsize-tipog2-item;
+    gap:$med-secundaria;
+    font-size: $med-cuarta;
 
     @include mobile{
         display: flex;
         justify-content: space-evenly;
-        font-size: 1.5rem;
+        font-size: $med-terciaria;
         width: 50%;
         margin: auto;
     }
-}
 
-.text{
+    @include small{
+        font-size: $med-secundaria
+    }
+
+
+.text, .item2{
     color: black;
     font-size: 2rem;
     text-decoration: none;
@@ -461,16 +437,8 @@ dotlottie-wc{
         }
 }
 }
-
-
-.mapa{
-    @include flex (center, center);
-    /*
-    display: flex;
-    justify-content: center;
-    align-items: center;*/
-    margin: $med-secundaria;
 }
+
 
 
 

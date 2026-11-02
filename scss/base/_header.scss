@@ -2,77 +2,25 @@
 @use "../utilities/mixin" as *;
 @use "../componentes/navs" as *;
 
-header nav.mobile{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        width: 80vw;
-        margin: $med-primaria auto;
-}
-
-
-/*
-.tipografia1 {
-    font-size: $fontsize-title;
-    color: $color-tipograf1;
-    text-decoration: $deco-subrayado;
-    text-align: $align-text;
-    font-family: $font-montserrat;
-    margin: auto;
-    padding: $padding-title;
-    background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
-    font-weight: bold;
-
-    @include mobile{
-        padding: 0.5rem;
-        font-size: 3rem;
-    }
-
-    .montserrat{
-    font-family: $font-montserrat;
-}
-}
-
-.position {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}*/
-
-
-.flex{
-    @include flex(space-around, center);
-    margin: $med-terciaria;
-    /*
-    display: flex;
-    align-items: center;
-    justify-content: space-around;*/
-
-    @include windows{
-        @include flex(space-between, center);
-        flex-direction: row;
-        gap: $med-terciaria;
-        margin: $med-primaria;
-}
-
-/*ul{
-    @include mobile{
-        @include flex(center, center);
-        flex-direction: column;
-    }
-}*/
-}
-
-    .logo img{
+header {
+    @include flex(center, center);
     margin: $med-primaria;
-    padding: auto;
-    height: $height-img;        /* El alto debe ser igual al ancho */
-    border-radius: 100%;   /* Esto crea el efecto de círculo */
+
+    @include small{
+        flex-direction: column;
+        gap: $med-primaria;
+}
+
+    img{
+    margin: $med-primaria;
+    height: $height-img;
+    border-radius: 100%;
     
     @include mobile{
-        margin: $med-primaria;
-        height: 8rem;
-
-        @include flex(center, center);
+        height: 15vh;
+    }
+    @include small{
+        height: 12vh;
     }
 }
 
@@ -88,6 +36,7 @@ header nav.mobile{
     transform: rotate(0) scale(1);
     opacity: 1;
     }
+}
 }
 }
 

@@ -2,19 +2,15 @@
 @use "../utilities/mixin" as *;
 
 footer {
-    @include flex (space-evenly, center);
-    /*
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;*/
-    font-size: $med-secundaria;
-    font-family: $font-lato;
+    @include flex (space-around, center);
+    padding: $med-primaria;
+    font-size: $med-primaria;
     background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
 
-    @include mobile{
-        text-align:center;
-        font-size: 0.5rem;
-        color: rgb(236, 99, 99);
+    .footer-text{
+        font-family: $font-lato;
+        text-align: center;
+        margin-bottom: 0;
     }
 
     .lato {

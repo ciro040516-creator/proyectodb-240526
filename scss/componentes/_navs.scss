@@ -2,40 +2,44 @@
 @use "../utilities/mixin" as *;
 
 nav {
-    font-size: $fontsize-nav;
-    padding: auto;
-    gap: $med-secundaria;
+    padding: $med-primaria;
     width: 100%;
 
-        @include mobile{
-            font-size: $med-secundaria;
-            gap: $med-primaria;
-            }
-
     ul {
-    list-style: $style-nav; /* sin viñetas en la lista*/
+    list-style: $style-nav;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 
-        @include mobile {
-        flex-direction: column;
+        @include small {
+        flex-wrap: wrap;
         }
     }
 
-    li>a {
+    li, a {
     color: $color-li;
     text-decoration: $style-nav;
+    font-size: $med-cuarta;
+    color: black;
+    text-align: $align-text;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: bold;
+
+    @include mobile{
+        font-size: $med-terciaria;
+    }
+
+    .cormorant{
+    font-family: "Cormorant Garamond", serif;
+}
 
     &:hover{
-    background-color: $color-hover-caja1;
+        background-color: $color-subrayado;
     }
 }
 }
 
+
 .subrayado {
     text-decoration: $deco-subrayado $color-subrayado solid;
-}
-
-.navbar-nav :hover{
-    background-color: $color-hover-caja1;
 }
